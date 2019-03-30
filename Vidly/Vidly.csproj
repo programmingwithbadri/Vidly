@@ -201,9 +201,9 @@
     <Compile Include="Migrations\201903301334521_AddGenreToMovie.Designer.cs">
       <DependentUpon>201903301334521_AddGenreToMovie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903301344179_SetGenreType.cs" />
-    <Compile Include="Migrations\201903301344179_SetGenreType.Designer.cs">
-      <DependentUpon>201903301344179_SetGenreType.cs</DependentUpon>
+    <Compile Include="Migrations\201903301400447_SetGenreType.cs" />
+    <Compile Include="Migrations\201903301400447_SetGenreType.Designer.cs">
+      <DependentUpon>201903301400447_SetGenreType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -319,8 +319,8 @@
     <EmbeddedResource Include="Migrations\201903301334521_AddGenreToMovie.resx">
       <DependentUpon>201903301334521_AddGenreToMovie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903301344179_SetGenreType.resx">
-      <DependentUpon>201903301344179_SetGenreType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903301400447_SetGenreType.resx">
+      <DependentUpon>201903301400447_SetGenreType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
