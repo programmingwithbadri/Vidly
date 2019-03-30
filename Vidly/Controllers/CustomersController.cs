@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Web;
@@ -16,9 +17,9 @@ namespace Vidly.Controllers
         {
             _context = new ApplicationDbContext();
         }
-        public ActionResult index()
+        public ActionResult Index()
         {
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c => c.MemberShipType).ToList();
 
             return View(customers);
         }  
