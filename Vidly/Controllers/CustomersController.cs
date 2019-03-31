@@ -27,7 +27,7 @@ namespace Vidly.Controllers
                 MemberShipTypes = memberShipTypes
             };
 
-            return View(memberShipTypes);
+            return View(newCustomerViewModel);
         }
 
         public ActionResult Index()
