@@ -59,7 +59,7 @@ namespace Vidly.Controllers
             }
             else
             {
-                var customerInDb = _context.Customers.First(c => c.Id == customer.Id);
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
                 customerInDb.Name = customer.Name;
                 customerInDb.BirthDate = customer.BirthDate;
@@ -70,6 +70,22 @@ namespace Vidly.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Customers");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new CustomerFormViewModel
+            {
+                MemberShipTypes = _context.MemberShipTypes.ToList(),
+                Customer = customer
+            };
+
+            return View("CustomerForm", viewModel);
         }
     }
 }
