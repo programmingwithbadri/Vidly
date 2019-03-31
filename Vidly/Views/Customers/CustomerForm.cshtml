@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2> New Customer </h2>
+<h2> Save Customer </h2>
 
 @using (Html.BeginForm("Save", "Customers"))
 {
@@ -25,6 +25,7 @@
             @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter) Subscribed to Newsletter?
         </label>
     </div>
+    @Html.HiddenFor(m => m.Customer.Id)
     <button type="submit" class="btn btn-primary">Submit</button>
 }
 
