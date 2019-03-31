@@ -17,6 +17,12 @@ namespace Vidly.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             var customers = _context.Customers.Include(c => c.MemberShipType).ToList();
@@ -35,6 +41,11 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+        public ActionResult Create()
+        {
+            throw new NotImplementedException();
         }
     }
 }
