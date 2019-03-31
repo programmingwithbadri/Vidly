@@ -27,7 +27,7 @@ namespace Vidly.Controllers
                 MemberShipTypes = memberShipTypes
             };
 
-            return View(customerFormViewModel);
+            return View("CustomerForm", customerFormViewModel);
         }
 
         public ActionResult Index()
@@ -71,7 +71,7 @@ namespace Vidly.Controllers
                 MemberShipTypes = _context.MemberShipTypes.ToList()
             };
 
-            return View("New", customerFormViewModel);
+            return View("CustomerForm", customerFormViewModel);
         }
     }
 }
