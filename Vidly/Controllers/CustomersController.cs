@@ -50,9 +50,13 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult Create(Customer customer)
         {
-            throw new NotImplementedException();
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
         }
     }
 }
