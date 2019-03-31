@@ -6,6 +6,7 @@ using System.Security.AccessControl;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -20,7 +21,13 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var memberShipTypes = _context.MemberShipTypes.ToList();
+            var newCustomerViewModel = new NewCustomerViewModel
+            {
+                MemberShipTypes = memberShipTypes
+            };
+
+            return View(memberShipTypes);
         }
 
         public ActionResult Index()
