@@ -23,7 +23,9 @@ namespace Vidly.App_Start
             // Now if you would copy paste the .ForMember line below the outbound mapping
             // "route" you'd say to your AutoMapper "Hey, don't worry about the id, don't map that."
 
-            //Now if you would perform a GET request with postman at / api / customers, you'd still get all the data. Just that every id is 0, because you told AutoMapper to not care about that.
+            // Now if you would perform a GET request with postman at / api / customers,
+            // you'd still get all the data. Just that every id is 0,
+            // because you told AutoMapper to not care about that.
             Mapper.CreateMap<CustomerDto, Customer>()
                 .ForMember(c => c.Id, opt => opt.Ignore());
 
