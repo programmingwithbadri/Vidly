@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Vidly.Dtos;
 using Vidly.DTOs;
 using Vidly.Models;
 
@@ -15,6 +16,7 @@ namespace Vidly.App_Start
             // So it has to map Customer -> CustomerDto.
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<MemberShipType, MemberShipTypeDto>();
 
 
             // Dto to Domain
