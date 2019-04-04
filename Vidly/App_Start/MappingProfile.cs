@@ -4,9 +4,9 @@ using Vidly.Models;
 
 namespace Vidly.App_Start
 {
-    public class CustomerMapper : Profile
+    public class MappingProfile : Profile
     {
-        public CustomerMapper()
+        public MappingProfile()
         {
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<CustomerDto, Customer>();
